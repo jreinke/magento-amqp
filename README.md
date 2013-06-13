@@ -1,6 +1,6 @@
-# Magento extension for sending messages through AMQP protocol (RabbitMQ, ActiveMQ, ...)
+## Magento extension for sending messages through AMQP protocol (RabbitMQ, ActiveMQ, ...)
 
-## Installation instructions
+### Installation instructions
 
 Install with [modgit](https://github.com/jreinke/modgit):
 
