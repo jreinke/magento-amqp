@@ -1,6 +1,10 @@
-## Magento extension for sending messages through AMQP protocol (RabbitMQ, ActiveMQ, ...)
+### Magento extension for sending messages through AMQP protocol (RabbitMQ, ActiveMQ, ...)
 
-### Installation instructions
+#### Requirements
+
+* AMQP PECL extension `sudo pecl install amqp`
+
+#### Installation instructions
 
 Install with [modgit](https://github.com/jreinke/modgit):
 
