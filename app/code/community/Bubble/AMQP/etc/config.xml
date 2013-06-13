@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <modules>
+        <Bubble_AMQP>
+            <version>1.0.0</version>
+        </Bubble_AMQP>
+    </modules>
+    <global>
+        <helpers>
+            <bubble_amqp> <!-- needed -->
+                <class>Bubble_AMQP_Helper</class>
+            </bubble_amqp>
+            <amqp> <!-- useful -->
+                <class>Bubble_AMQP_Helper</class>
+            </amqp>
+        </helpers>
+    </global>
+    <adminhtml>
+        <translate>
+            <modules>
+                <Bubble_AMQP>
+                    <files>
+                        <default>Bubble_AMQP.csv</default>
+                    </files>
+                </Bubble_AMQP>
+            </modules>
+        </translate>
+    </adminhtml>
+    <default>
+        <bubble_amqp>
+            <connection>
+                <enable>1</enable>
+                <host>127.0.0.1</host>
+                <port>5672</port>
+                <vhost><![CDATA[/]]></vhost>
+                <user>guest</user>
+                <password>guest</password>
+            </connection>
+        </bubble_amqp>
+    </default>
+</config>
