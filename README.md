@@ -18,3 +18,12 @@ Finally:
 
 * Clear cache
 * Logout from admin then login again to access module configuration
+
+#### Usage
+```php
+<?php
+// Sending data of a new customer to exchange 'amqp.topic' with routing key 'magento.customer.create'
+$data = $customer->getData();
+$broker = Mage::helper('amqp/broker');
+$broker->send(json_encode($data), 'amq.topic', 'magento.customer.create');
+```
