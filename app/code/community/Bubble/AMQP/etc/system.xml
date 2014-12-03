@@ -2,13 +2,13 @@
 <config>
     <tabs>
         <bubble translate="label">
-            <label><![CDATA[<div><img src="http://i.imgur.com/nkD1M9R.png" alt="BubbleCode" title="BubbleCode" width="108" height="23" style="display:block;" /></div>]]></label>
+            <label>Bubble Extensions</label>
             <sort_order>1000</sort_order>
         </bubble>
     </tabs>
     <sections>
         <bubble_amqp translate="label" module="bubble_amqp">
-            <label>Bubble AMQP</label>
+            <label>AMQP</label>
             <tab>bubble</tab>
             <sort_order>800</sort_order>
             <show_in_default>1</show_in_default>
