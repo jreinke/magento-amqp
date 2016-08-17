@@ -49,7 +49,7 @@ class Bubble_AMQP_Helper_Broker extends Mage_Core_Helper_Abstract
         try{
             $this->_connection->connect();
         } catch (Exception $e){
-            throw new Exception('', $e->getMessage());
+            throw new Exception('AMQP Connection error: '. $e->getMessage());
         }
         if (!$this->_connection->isConnected()) {
             Mage::throwException(sprintf(
