@@ -41,7 +41,16 @@ class Bubble_AMQP_Helper_Broker extends Mage_Core_Helper_Abstract
         }
         $config = $this->getConfig();
         $this->_connection = new AMQPConnection($config);
-        $this->_connection->connect();
+        /** 
+         * @see
+         *  - https://github.com/jreinke/magento-amqp/issues/2
+         *  - http://magento.stackexchange.com/q/6674/24845
+         */
+        try{
+            $this->_connection->connect();
+        } catch (Exception $e){
+            throw new Exception('', $e->getMessage());
+        }
         if (!$this->_connection->isConnected()) {
             Mage::throwException(sprintf(
                 "Unable to authenticate to 'amqp://%s:%d' (vhost: %s, user: %s, password: %s)",
