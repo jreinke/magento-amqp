@@ -40,6 +40,7 @@ class Bubble_AMQP_Helper_Broker extends Mage_Core_Helper_Abstract
             Mage::throwException('AMQP extension does not appear to be loaded');
         }
         $config = $this->getConfig();
+        $config['login'] = $config['user'] ?: $config['login']; //for AMQP PECL v1.4.0 workaround
         $this->_connection = new AMQPConnection($config);
         $this->_connection->connect();
         if (!$this->_connection->isConnected()) {
